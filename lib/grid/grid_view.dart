@@ -46,6 +46,9 @@ class GridPage extends StatelessWidget {
             height: 10,
           ),
           GridViewWidget(),
+          const SizedBox(
+            height: 10,
+          ),
         ],
       ),
       bottomNavigationBar: Container(

@@ -1,4 +1,5 @@
 import 'package:demofinsire/grid/grid_controller.dart';
+import 'package:demofinsire/res.dart';
 import 'package:demofinsire/utils/color.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
@@ -57,15 +58,29 @@ class GridViewWidget extends StatelessWidget {
                             ),
                           ],
                         ),
-                        const SizedBox(
-                          height: 5,
-                        ),
-                        const Text(
-                          '23 Min Ago',
-                          style: TextStyle(
-                              color: red,
-                              fontWeight: FontWeight.w600,
-                              fontSize: 12),
+                        Row(
+                          children: [
+                            Text(
+                              '${feed.active} Min Ago',
+                              style: TextStyle(
+                                  color: red,
+                                  fontWeight: FontWeight.w600,
+                                  fontSize: 12),
+                            ),
+                            Spacer(),
+                            ClipRRect(
+                              borderRadius: BorderRadius.circular(20),
+                              child: Container(
+                                  width: 30,
+                                  height: 30,
+                                  decoration:
+                                      BoxDecoration(shape: BoxShape.circle),
+                                  child: Image.asset(
+                                    feed.image,
+                                    fit: BoxFit.cover,
+                                  )),
+                            )
+                          ],
                         )
                       ],
                     ),

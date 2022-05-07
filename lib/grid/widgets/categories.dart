@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:demofinsire/grid/grid_controller.dart';
 import 'package:demofinsire/utils/color.dart';
 import 'package:flutter/material.dart';
@@ -21,7 +23,13 @@ class CategoriesLV extends StatelessWidget {
           return Obx(() {
             return InkWell(
               onTap: () {
-                // category.isSelected.value  = true;
+                controller.category.forEach((element) {
+                  if(element.isSelected.value){
+                    element.isSelected.value = false;
+                  }
+                });
+                category.isSelected.value  = true;
+                ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('${category.category}')));
               },
               child: Container(
                 width: 100,

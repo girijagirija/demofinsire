@@ -37,6 +37,9 @@ dependencies:
   flutter_staggered_grid_view: ^0.6.1
   get:
   lottie:
+  google_fonts:
+
+
 
 dev_dependencies:
   flutter_test:
@@ -67,6 +70,10 @@ flutter:
     - assets/c.jpg
     - assets/d.jfif
     - assets/e.jpg
+    - assets/f.jpg
+    - assets/g.jfif
+    - assets/h.jfif
+    - assets/i.jpg
     - assets/loading.json
   #   - images/a_dot_ham.jpeg
 
